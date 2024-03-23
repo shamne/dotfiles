@@ -49,3 +49,18 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/sasha/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/sasha/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/sasha/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/sasha/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# postgresql
+export PATH="/usr/local/opt/postgresql@12/bin:$PATH"
